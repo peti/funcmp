@@ -1,7 +1,7 @@
 Functional MetaPost
 ===================
 
-:Latest Release: funcmp-2005-02-11.tar.gz_
+:Latest Release: funcmp-2005-02-13.tar.gz_
 :Darcs:          darcs_ get http://cryp.to/funcmp/
 
 Synopsis
@@ -61,6 +61,6 @@ Copyleft
 
 .. _darcs: http://abridgegame.org/darcs/
 
-.. _funcmp-2005-02-11.tar.gz: http://cryp.to/funcmp/funcmp-2005-02-11.tar.gz
+.. _funcmp-2005-02-13.tar.gz: http://cryp.to/funcmp/funcmp-2005-02-13.tar.gz
 
 .. _MetaPost: http://www.tug.org/metapost.html
