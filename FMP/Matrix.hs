@@ -72,7 +72,7 @@ matrixAlignSepBy sepH sepV cs =  overlay (equations colWidths
                                   | ((x, y, n), Cell d _) <- nps]
       number (x, y, n) ((Cell d p:cs):rs)
                               =  ((x, y, n),Cell d p):number (x+1, y, n+1) (cs:rs)
-      number (x, y, n) ([]:rs)=  number (0, y+1, n) rs
+      number (_, y, n) ([]:rs)=  number (0, y+1, n) rs
       number _ _              =  []
 
 rowAlign                      :: [Cell] -> Picture

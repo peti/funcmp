@@ -837,9 +837,9 @@ pathGetStart f (PathJoin (PathEndDir _ _) ped _)
                               =  f ped
 pathGetStart f (PathJoin p1 _ _)
                               =  pathGetStart f p1
-pathGetStart f (PathDefine eqs p)
+pathGetStart f (PathDefine _ p)
                               =  pathGetStart f p
-pathGetStart f (PathTransform t p)
+pathGetStart f (PathTransform _ p)
                               =  pathGetStart f p
 pathGetStart f _              =  f stdPathElemDescr
 
@@ -851,9 +851,9 @@ pathGetEnd f (PathJoin _ ped (PathPoint _))
 pathGetEnd f (PathJoin _ ped (PathEndDir _ _))
                               =  f ped
 pathGetEnd f (PathJoin _ _ p2)=  pathGetEnd f p2
-pathGetEnd f (PathDefine eqs p )
+pathGetEnd f (PathDefine _ p )
                               =  pathGetEnd f p
-pathGetEnd f (PathTransform t p)
+pathGetEnd f (PathTransform _ p)
                               =  pathGetEnd f p
 pathGetEnd f _                =  f stdPathElemDescr
 
@@ -1193,7 +1193,7 @@ instance HasPen Area where
 instance HasLayer Area where
       setBack (Area ad ps)    =  Area ad{ arLayer = Back } ps
       setFront (Area ad ps)   =  Area ad{ arLayer = Front } ps
-      getLayer (Area ad ps)   =  arLayer ad
+      getLayer (Area ad _)    =  arLayer ad
 
 
 ensureCycle                   :: Path -> Path

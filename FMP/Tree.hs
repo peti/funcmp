@@ -197,7 +197,7 @@ instance IsHideable Edge where
 
 instance HasName Tree where
       setName n (Node p nd es)=  Node (setName n p) nd es
-      getNames (Node p nd es) =  getNames p
+      getNames (Node p _ _)   =  getNames p
 
 instance HasColor Tree where
       setColor c (Node p nd es )
@@ -403,7 +403,7 @@ design                        :: Tree' (Int, Int, Int) -> [Equation]
 design t                      =  fst (design' t)
 
 design'                       :: Tree' (Int, Int, Int) -> ([Equation], Extent)
-design' (Node' (n,m,l) nd ts) =  (foldl (&) [] designedTrees & eqs,
+design' (Node' (_,m,l) nd ts) =  (foldl (&) [] designedTrees & eqs,
                                   topExtent (nDistH nd) : mergedExtent)
       where
       (designedTrees, es)     =  unzip [ design' t| t <- ts ]
@@ -576,7 +576,7 @@ replaceDir' a _               =  a
 
 replaceCutPic                 :: CutPic -> [(Name, Name)] -> CutPic
 replaceCutPic (CutPic name) al=  CutPic (replaceName name al)
-replaceCutPic c al            =  c
+replaceCutPic c _             =  c
 
 replacePoint                  :: Point -> [(Name, Name)] -> Point
 replacePoint (PointVar name) al

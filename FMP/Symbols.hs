@@ -99,7 +99,7 @@ symPName name n d             =  SymPUnion3   (SymPName name n 0)
                                               d
 
 symPNames                     :: [Name] -> Int -> SymPoint -> SymPoint
-symPNames [] n d@(SymPUnion3 d1 d2 d3)
+symPNames [] _ d@(SymPUnion3 _ _ _)
                               =  d
 symPNames names n d@(SymPUnion3 d1 d2 d3)
                               =  SymPUnion3
@@ -128,7 +128,7 @@ symNUnions []                 =  SymNRelax
 symNUnions (d:ds)             =  d & symNUnions ds
 
 symNName                      :: Name -> Int -> SymNum -> SymNum
-symNName name n d@(SymNUnion3 d1 d2 d3)
+symNName name n (SymNUnion3 d1 d2 d3)
                               =  SymNUnion3   (SymNName name n 0 & d1)
                                               (SymNHier name n d3 & d2)
                                               d3
@@ -137,7 +137,7 @@ symNName name n d             =  SymNUnion3   (SymNName name n 0)
                                               d
 
 symNNames                     :: [Name] -> Int -> SymNum -> SymNum
-symNNames [] n d@(SymNUnion3 d1 d2 d3)
+symNNames [] _ d@(SymNUnion3 _ _ _)
                               =  d
 symNNames names n d@(SymNUnion3 d1 d2 d3)
                               =  SymNUnion3

@@ -172,7 +172,7 @@ resolveNumeric _ a            =  Just a
 
 
 resolvePath                   :: (Int, Int, Symbols) -> Path -> Maybe (Int, Path)
-resolvePath (n, m, s) PathCycle
+resolvePath (_, m, _) PathCycle
                               =  Just (m, PathCycle)
 resolvePath (n, m, s) (PathPoint p)
                               =  maybe' (\a->(m, PathPoint a)) (resolvePoint (n, s) p)
@@ -181,7 +181,7 @@ resolvePath (n, m, s) (PathEndDir p d)
                                       (resolvePoint (n, s) p)
 resolvePath (n, m, s) (PathJoin p1 ped p2)
                               =  case resolvePath (n, m, s) p1 of
-                                      Just (m1', p1')
+                                      Just (_, p1')
                                               -> case resolvePath (n, m, s) p2 of
                                               Just (m2', p2')
                                                       -> Just (m2',PathJoin p1'
@@ -191,7 +191,7 @@ resolvePath (n, m, s) (PathJoin p1 ped p2)
                                       _       -> Nothing
 resolvePath (n, m, s) (PathBuildCycle p1 p2)
                               =  case resolvePath (n, m, s) p1 of
-                                      Just (m1', p1')
+                                      Just (_, p1')
                                               -> case resolvePath (n, m, s) p2 of
                                               Just (m2', p2')
                                                       -> Just (m2', PathBuildCycle p1' p2')
@@ -231,7 +231,7 @@ resolveDir ns (DirVector a)   =  maybe DirEmpty DirVector (resolvePoint ns a)
 resolveDir _ a                =  a
 
 resolveCut                    :: (Int, SymPoint) -> CutPic -> Maybe CutPic
-resolveCut (n,_) (CutPic (NameDir d))
+resolveCut (n,_) (CutPic (NameDir _))
                               =  return (CutPic' (suff n))
 resolveCut (n,SymPUnion p1 p2) c
                               =  resolveCut (n, p1) c
@@ -287,7 +287,7 @@ resolvePen ns (PenSquare (x, y ) a)
                               =  PenSquare (getDefault (resolveNumeric ns x) 1,
                                       getDefault (resolveNumeric ns y) 1)
                                       (getDefault (resolveNumeric ns a) 0)
-resolvePen ns a               =  a
+resolvePen _ a                =  a
 
 -------------------------------------------------------------------
 
@@ -370,7 +370,7 @@ symEquation (n, m, s) (Equations es)
                               =  symEquations (n, m,  s) es
 
 symPoint                      :: (Int, Int, Symbols) -> Point -> (Int, Symbols)
-symPoint (n, m, s) (PointVar (Global _))
+symPoint (_, m, s) (PointVar (Global _))
                               =  (m, s)
 symPoint nms (PointVar name)
                               =  insertPntName nms name
@@ -398,7 +398,7 @@ symPoint (_, m, s) _          =  (m, s)
 
 
 symNumeric                    :: (Int,Int,Symbols) -> Numeric -> (Int,Symbols)
-symNumeric (n, m, s) (NumericVar (Global _))
+symNumeric (_, m, s) (NumericVar (Global _))
                               =  (m, s)
 symNumeric (n, m, s) (NumericVar name)
                               =  insertNumeric (n, m, s) name

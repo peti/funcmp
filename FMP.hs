@@ -102,7 +102,7 @@ generate prefix n pic         =  getParameters >>= doOutput
 funcmp                        :: IsPicture a => String -> Int -> a -> IO ()
 funcmp filePath n pic         =  do param <- getParameters
                                     writeFile cacheName (show picture)
-                                    err <- system (funcmpBin param
+                                    system (funcmpBin param
                                               ++ " " ++ filePath
                                               ++ " " ++ show n
                                               ++ " " ++ funcmpRTS param)

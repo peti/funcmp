@@ -446,7 +446,7 @@ instance HasEmit MPPathSub where
  emit (MPPathEndDir a d)      =  emit a <> emit d
  emit (MPPathEnd a)           =  emit a
  emit MPCycle                 =  text "cycle"
- emit (MPPathBuildCycle  (p1:p2:ps))
+ emit (MPPathBuildCycle  (p1:p2:_))
                               =  text "buildcycle(" <> emit p1 <> comma
                               <> emit p2 <> char ')'
  emit (MPPathTransform (MPTransform a b c d e f) p)

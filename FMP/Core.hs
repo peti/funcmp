@@ -259,13 +259,13 @@ mp (Empty w h) (n, symDown)   =  (n+1, relax,
               hight h         =  MPEquals [tdot (suff n) N,
                                            tdot (suff n) S + pair 0 (mpNumeric h)]
 
-mp (Tex s) (n, symDown)       =  (n+1, relax,
+mp (Tex s) (n, _)             =  (n+1, relax,
                                   MPBoxit (suff n) (MPTex s)
                                  & MPEquals [Id (suff n++".dx"), txtDX]
                                  & MPEquals [Id (suff n++".dy"), txtDY],
                                   MPDrawUnBoxed [suff n])
 
-mp (Text s) (n, symDown)      =  (n+1,
+mp (Text s) (n, _)            =  (n+1,
                                   relax,
                                   MPBoxit (suff n) (MPText s)
                                  & MPEquals [Id (suff n++".dx"), txtDX]
@@ -407,7 +407,7 @@ drawPath def (PathJoin p1 ped p2) n pr
                                                       (MPBPath (mpCutPic ca))
 drawPath def (PathTransform _ p) n pr
                               =  drawPath def p n pr
-drawPath def (PathBuildCycle p1 p2) n pr
+drawPath _ (PathBuildCycle _ _) _ _
                               =  (0, MPDraw   MPNormal
                                               (MPPathTerm (Id "tempPath"))
                                               MPDefaultPattern

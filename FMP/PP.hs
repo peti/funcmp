@@ -96,6 +96,6 @@ showDoc (d1 `Beside` d2) n c  = (d1', n'')
 showDoc (Text s) n cont       =  if n > 100
                                       then (showString ('\n':s) cont, 0)
                                       else (showString s cont, n+1)
-showDoc (Return d) n c        =  (showString "\n" d',n')
+showDoc (Return d) _ c        =  (showString "\n" d',n')
       where   (d',n')         =  showDoc d 0 c
 showDoc Empty n cont          =  (cont, n)
