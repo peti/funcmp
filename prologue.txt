@@ -1,0 +1,20 @@
+Functional MetaPost is a frontend to the MetaPost language
+<http://www.tug.org/metapost.html> by John Hobby. Users
+write their graphics as Haskell programs, which then emit
+MetaPost code that can be compiled into encapsulated
+PostScript files and smoothly included into e.g. LaTeX.
+
+Your best bet for documentation are the German-language
+documents
+
+ * <http://cryp.to/funcmp/legacy-doc/Thesis.ps> and
+
+ * <http://cryp.to/funcmp/legacy-doc/Tutorial.ps>;
+
+or these (incomplete) English translations:
+
+ * <http://cryp.to/funcmp/legacy-doc/Manual_eng.ps>,
+
+ * <http://cryp.to/funcmp/legacy-doc/Thesis_eng.ps>,
+
+ * <http://cryp.to/funcmp/legacy-doc/Tutorial_eng.ps>.
