@@ -1,5 +1,5 @@
-name:		funcmp
-version:	0.0-2005-02-11
+name:		PACKAGE
+version:	VERSION
 license:	GPL
 maintainer:	simons@cryp.to
 exposed:	True
@@ -28,7 +28,6 @@ hidden-modules:
 import-dirs:	IMPORT_DIR
 library-dirs:	LIB_DIR
 hs-libraries:   "HSfuncmp"
-include-dirs: 	INCLUDE_DIR
 depends:	base, mtl
 
 haddock-interfaces:	HADDOCK_IFACE
