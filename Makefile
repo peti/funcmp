@@ -7,7 +7,7 @@ ALL_DIRS =      \
     FMP
 
 PACKAGE         := funcmp
-RELEASEDAY      := 2005-02-13
+RELEASEDAY      := 2005-02-14
 VERSION         := 0.0-$(RELEASEDAY)
 PACKAGE_DEPS    := base haskell98
 SRC_HC_OPTS     += -fno-warn-name-shadowing -fno-warn-type-defaults
