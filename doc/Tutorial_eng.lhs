@@ -563,13 +563,14 @@ use of other units
 
 
 < mm, pt, bp, cm, pc, cc, inch  :: Numeric
-< mm                            =  2.84528
-< pt                            =  1
-< bp                            =  1.00375
-< cm                            =  28.45276
-< pc                            =  12
-< cc                            =  12.84010
-< inch                          =  72.27
+< mm                            =  2.83464
+< pt                            =  0.99626
+< dd                            =  1.06601
+< bp                            =  1
+< cm                            =  28.34645
+< pc                            =  11.95517
+< cc                            =  12.79213
+< inch                          =  72
 
 |hspace (2*cm)| generates a distance of two centimeters.
 
