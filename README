@@ -5,7 +5,7 @@ Functional MetaPost Interim
                  <http://savannah.nongnu.org/projects/fmp/>`_.
                  Another page is `here
                  <http://afavant.elte.hu/~wferi/funcmp/>`_.
-:Latest Release: funcmp-2005-02-03.tar.gz_
+:Latest Release: funcmp-2005-02-10.tar.gz_
 :Darcs:          darcs_ get http://cryp.to/funcmp/
 
 Synopsis
@@ -65,6 +65,6 @@ Copyleft
 
 .. _darcs: http://abridgegame.org/darcs/
 
-.. _funcmp-2005-02-03.tar.gz: http://cryp.to/funcmp/funcmp-2005-02-03.tar.gz
+.. _funcmp-2005-02-10.tar.gz: http://cryp.to/funcmp/funcmp-2005-02-10.tar.gz
 
 .. _MetaPost: http://www.tug.org/metapost.html
