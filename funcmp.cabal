@@ -1,5 +1,5 @@
 Name:            funcmp
-Version:         0.0-2005-02-10
+Version:         0.0-2005-02-11
 Author:          Meik Hellmund, Ralf Hinze, Joachim Korittky,
                  Marco Kuhlmann, Ferenc Wágner, Peter Simons
 License:         GPL
@@ -7,7 +7,6 @@ Maintainer:      simons@cryp.to
 Homepage:        http://cryp.to/funcmp/
 Description:     Functional MetaPost
 Build-Depends:   base, haskell98
-HS-Source-Dir:   src
 Exposed-Modules:
     FMP,
     FMP.Canvas,

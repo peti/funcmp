@@ -1,0 +1,35 @@
+name:		funcmp
+version:	0.0-2005-02-11
+license:	GPL
+maintainer:	simons@cryp.to
+exposed:	True
+
+exposed-modules:
+    FMP,
+    FMP.Canvas,
+    FMP.Color,
+    FMP.Core,
+    FMP.File,
+    FMP.Frames,
+    FMP.Matrix,
+    FMP.PP,
+    FMP.Picture,
+    FMP.RedBlack,
+    FMP.Resolve,
+    FMP.Symbols,
+    FMP.Syntax,
+    FMP.Term,
+    FMP.Tree,
+    FMP.Turtle,
+    FMP.Types
+
+hidden-modules:
+
+import-dirs:	IMPORT_DIR
+library-dirs:	LIB_DIR
+hs-libraries:   "HSfuncmp"
+include-dirs: 	INCLUDE_DIR
+depends:	base, mtl
+
+haddock-interfaces:	HADDOCK_IFACE
+haddock-html:		HTML_DIR
