@@ -29,6 +29,15 @@
 
 Hilfsfunktionen
 
+( wferi ?
+
+It would be interesting to know what these types contain.  The |Int|
+and the |Symbols| probably represent some kind of state.  It seems
+that every invocation of |mp| must have different |n| parameter,
+probably for suffixing its local variables.
+
+wferi )
+
 > type MPArg			=  (Int, Symbols)
 > type MPResult			=  (Int, Symbols, MetaPost, MetaPost)
 
@@ -85,6 +94,17 @@ Hilfsfunktionen
 >		pattern		=  faPattern fa
 
 Erzeugen von MetaPost
+
+( wferi
+
+Here we do the real work.  |mp| gives the |MetaPost| equivalents of
+all constructors of |Picture|.
+
+The meanings of the arguments and result values are not clear.  From
+|generate| we get |(1,relax)::MPArg|, the first two members of the
+result are ignored, and the last two make up the MetaPost code.
+
+wferi )
 
 > mp				:: Picture -> MPArg -> MPResult
 > mp (Attributes as p) (n, symDown)

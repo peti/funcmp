@@ -33,6 +33,14 @@
 
 Hauptkonvertierungsfunktion
 
+( wferi
+
+This function is a simple wrapper containing some definitions and
+default settings.  Starts the Nth figure with PARAMs by translating
+picture T via |mp|.
+
+wferi )
+
 > metaPost 			:: Int -> Picture -> Parameters -> MetaPost
 > metaPost n t param		=  MPVerbatim "batchmode;"
 >				  &  MPVerbatim (prolog param)
@@ -55,7 +63,15 @@ Hauptkonvertierungsfunktion
 >				  &  MPVerbatim (epilog param)
 >	where (_, _, l, z )	=  mp t (1, relax)
 
+( wferi
 
+This is the main entry point.  Given a NAME, a NUMBER and a PICTURE it
+|emit|s a file called NAME.MP (or NAME.NUMBER.MP in not |newmp|) with
+a beginfig(NUMBER) in it, and runs MetaPost on it.  The conversion to
+|MetaPost|, which |HasEmit|, is done by |metaPost|.  Finally, the
+emitted |Doc| is |show|n.
+
+wferi )
 
 > generate			:: IsPicture a => String -> Int -> a -> IO ()
 > generate prefix n pic		=  getParameters >>= doOutput

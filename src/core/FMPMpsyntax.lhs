@@ -41,6 +41,12 @@
 > class HasEmit a where
 >	emit			:: a -> Doc
 
+( wferi
+
+This data type contains the compiled graphics, ready to |emit|.
+
+wferi )
+
 > data MetaPost			=  MPAssign 	Term 	Term
 >				|  MPAssignPath	String  MPPath
 >				|  MPBoxit 	String 	MetaPost

@@ -91,7 +91,13 @@
 >		where
 > 		go d []		=  [d]
 > 		go d (e:es)	=  (d <> p) : go e es
- 
+
+( wferi ?
+
+What is the difference between |$$| and |$+$|?  Why not delete one of them?
+
+wferi )
+
 > ($$)				:: Doc -> Doc -> Doc
 > p $$  q			=  p `Beside` Return q
 
