@@ -1,3 +1,24 @@
+2004-10-25  functionalmetapost@henning-thielemann.de
+
+	* sin, cos, tan must use radians, not degrees to be conform to the
+	semantics of Floating changed Sin to SinD and Cos to CosD The
+	change of interpretation of numbers will break all examples
+	relying on degrees.
+
+2004-01-18  Peter Simons  <simons@cryp.to>
+
+	* src/FMP.lhs: add Doc to the export list
+
+	* Many, many changes to make the source compile with ghc 6.x and
+	run with Hugs.
+
+	* src/FMP.lhs: Don't export FMP.PP in FMP.lhs.
+
+	* Converted modules to hierarchical namespace.
+
+	* Seriously cleaned-up the import and export lists. FMP.lhs now
+	includes all and provides all.
+
 2002-09-22  Ferenc Wagner  <wferi@bolyai1.elte.hu>
 
 	* src/core/FMP{,Core,Mpsyntax,PP}: Added some comments in
@@ -9,7 +30,7 @@
 2002-09-06  Marco Kuhlmann <mk@mcqm.net>
 
 	Imported sources into Savannah CVS.
-	
+
 	* FMPFile.lhs (getParameters): Changed configuration file name
 	from .FuncMP to fmp.ini to prevent this file from being
 	overlooked.  Eventually, the handling of configuration files
@@ -18,7 +39,7 @@
 	* Fontmap: Removed from the distribution.  The font mapping is a
 	task that has to be solved on the metapost (TeX distribution)
 	level, and not within FMP.
-	
+
 	* AUTHORS, COPYING, INSTALL, NEWS, README: new files
 
 	Added copyright statements to all files.
