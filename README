@@ -44,6 +44,10 @@ Documentation
     <http://cryp.to/funcmp/legacy-doc/Tutorial_eng.ps>`_ as
     well.
 
+  `Reference Documentation`_
+     Haddock-generated reference of all exported
+     functions.
+
 Copyleft
 --------
 
@@ -64,3 +68,5 @@ Copyleft
 .. _funcmp-2005-02-13.tar.gz: http://cryp.to/funcmp/funcmp-2005-02-13.tar.gz
 
 .. _MetaPost: http://www.tug.org/metapost.html
+
+.. _Reference Documentation: docs/index.html
