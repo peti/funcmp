@@ -84,8 +84,9 @@ mpPathArrow DefaultArrowHead
                               =  MPNormal
 mpPathArrow (ArrowHead a l style)
                               =  MPArrow a l (mpArrowStyle style)
-mpPathRArrow DefaultArrowHead
-                              =  MPNormal
+
+mpPathRArrow                  :: ArrowHead -> MPArrow
+mpPathRArrow DefaultArrowHead =  MPNormal
 mpPathRArrow (ArrowHead a l style)
                               =  MPReverse a l (mpArrowStyle style)
 

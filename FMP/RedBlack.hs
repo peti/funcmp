@@ -3,7 +3,6 @@ import FMP.Types
 import FMP.Picture
 import FMP.Color
 import FMP.Tree
-import FMP.Frames
 
 data Two34 a                  =  Nil
                               |  Two   (Two34 a) a (Two34 a)
@@ -47,16 +46,19 @@ edgeNRed n t                  =  edgeN n t
 tiny                          :: String -> Picture
 tiny a                        =  tex ("\\tiny "++a)
 
+tbox                          :: String -> Frame
 tbox s                        =  oval (   (dot # setName "p1")
                                       ||| tiny s
                                       ||| (dot # setName "p2"))
 
+tbox2                         :: String -> String -> Frame
 tbox2 s1 s2                   =  oval (   (dot # setName "p1")
                                       ||| tiny s1
                                       ||| (dot # setName "p2")
                                       ||| tiny s2
                                       ||| (dot # setName "p3"))
 
+tbox3                         :: String -> String -> String -> Frame
 tbox3 s1 s2 s3                =  oval (   (dot # setName "p1")
                                       ||| tiny s1
                                       ||| (dot # setName "p2")

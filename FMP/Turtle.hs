@@ -38,6 +38,7 @@ instance HasDefault TurtleDescr where
                                               tPen            = Nothing,
                                               tPenDown        = True }
 
+stdTurtleDescr                :: TurtleDescr
 stdTurtleDescr                =  TurtleDescr {tPos            = (0.0, 0.0),
                                               tOrientation    = 0,
                                               tColor          = Nothing,
