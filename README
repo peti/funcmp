@@ -1,10 +1,6 @@
-Functional MetaPost Interim
-===========================
+Functional MetaPost
+===================
 
-:Note:           The library's real home is at `Savannah
-                 <http://savannah.nongnu.org/projects/fmp/>`_.
-                 Another page is `here
-                 <http://afavant.elte.hu/~wferi/funcmp/>`_.
 :Latest Release: funcmp-2005-02-11.tar.gz_
 :Darcs:          darcs_ get http://cryp.to/funcmp/
 
