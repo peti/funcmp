@@ -28,7 +28,7 @@ index.html:	README
 
 clean::
 	@rm -rf dist
-	@rm -f test README.html `find . \( -name *.o -o -name *.hi \)`
+	@rm -f test README.html `find . \( -name '*.o' -o -name '*.hi' \)`
 
 distclean:	clean
 	@rm -rf docs $(DISTNAME).tar.gz
