@@ -4,7 +4,7 @@ PACKAGE		:= funcmp
 RELEASE		:= `date --iso-8601`
 DISTNAME	:= $(PACKAGE)-$(RELEASE)
 GHCURL		:= http://haskell.org/ghc/docs/latest/html/libraries
-GHCPREFIX	:= /usr/local/ghc-current/share/ghc-6.3/html/libraries
+GHCPREFIX	:= /usr/local/ghc-current/share/ghc-6.5/html/libraries
 CABAL		:= runghc /usr/local/src/cabal-current/Setup.lhs
 
 .PHONY: all docs clean distclean dist redate init-src
