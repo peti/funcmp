@@ -1,5 +1,5 @@
 module FMP.Picture (
-      (|-|), (|||), (|=|),     (||||), (#),
+      (|-|), (|||), (|=|),     (||||), ( # ),
       (.&.), (...), (.-.),     (....), (.--.),
       IsPicture(..),     IsPath(..), IsArea(..),
       HasPicture(..),   HasName(..), HasDXY(..), HasExtent(..),
@@ -48,7 +48,7 @@ infixr 1 &
 infixl 5 |-|, |=|
 infixl 6 |||, ||||
 
-(#)                           :: a -> (a -> b) -> b
+( # )                         :: a -> (a -> b) -> b
 a # f                         =  f a
 
 class HasConcat a where
