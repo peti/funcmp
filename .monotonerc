@@ -1,6 +1,16 @@
 -- .monotonerc for FuncMP
 
 function ignore_file(name)
+
+  -- ignore CVS
+  if (name == ".cvsignore") then return true end
+  if (string.find(name, "CVS/Entries$")) then return true end
+  if (string.find(name, "CVS/Entries.Log$")) then return true end
+  if (string.find(name, "CVS/Repository$")) then return true end
+  if (string.find(name, "CVS/Root$")) then return true end
+  if (string.find(name, "CVS/Tag")) then return true end
+
+  -- ignore generated files
   if (name == ".installed-pkg-config") then return true end
   if (name == ".setup-config") then return true end
   if (name == "index.html") then return true end
