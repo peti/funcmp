@@ -5,8 +5,8 @@ Functional MetaPost Interim
                  <http://savannah.nongnu.org/projects/fmp/>`_.
                  Another page is `here
                  <http://afavant.elte.hu/~wferi/funcmp/>`_.
-:Latest Release: funcmp-2004-10-25.tar.gz_
-:Darcs:          darcs_ get --partial http://cryp.to/funcmp/
+:Latest Release: funcmp-2005-02-03.tar.gz_
+:Darcs:          darcs_ get http://cryp.to/funcmp/
 
 Synopsis
 --------
@@ -16,16 +16,6 @@ Synopsis
   graphics as Haskell programs, which then emit MetaPost
   code that can be compiled into encapsulated PostScript
   files and smoothly included into e.g. LaTeX.
-
-  This library was written Joachim Korittky and later
-  modified by various other people. Months ago, I spent some
-  time moving the modules into the hierarchical ``FMP.*``
-  namespace and fixing minor problems to make it work with
-  GHC 6.x and Hugs98. However, I never got around to
-  building the documentation, writing a ``Makefile``, etc.
-  Since I probably won't get around to it in the near
-  future, I release this version as an interim in the hope
-  that it will be useful.
 
 Documentation
 -------------
@@ -75,6 +65,6 @@ Copyleft
 
 .. _darcs: http://abridgegame.org/darcs/
 
-.. _funcmp-2004-10-25.tar.gz: http://cryp.to/funcmp/funcmp-2004-10-25.tar.gz
+.. _funcmp-2005-02-03.tar.gz: http://cryp.to/funcmp/funcmp-2005-02-03.tar.gz
 
 .. _MetaPost: http://www.tug.org/metapost.html

@@ -1,0 +1,28 @@
+Name:            funcmp
+Version:         2005-02-03
+Author:          Meik Hellmund, Ralf Hinze, Joachim Korittky,
+                 Marco Kuhlmann, Ferenc Wágner, Peter Simbons
+License:         GPL
+Maintainer:      simons@cryp.to
+Homepage:        http://cryp.to/funcmp/
+Description:     Functional MetaPost
+Build-Depends:   base
+HS-Source-Dir:   src
+Exposed-Modules:
+    FMP,
+    FMP.Canvas,
+    FMP.Color,
+    FMP.Core,
+    FMP.File,
+    FMP.Frames,
+    FMP.Matrix,
+    FMP.PP,
+    FMP.Picture,
+    FMP.RedBlack,
+    FMP.Resolve,
+    FMP.Symbols,
+    FMP.Syntax,
+    FMP.Term,
+    FMP.Tree,
+    FMP.Turtle,
+    FMP.Types
