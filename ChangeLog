@@ -1,3 +1,11 @@
+2002-09-22  Ferenc Wagner  <wferi@bolyai1.elte.hu>
+
+	* src/core/FMP{,Core,Mpsyntax,PP}: Added some comments in
+	( wferi ? -- wferi ) blocks.  Questions are marked by ?s.
+
+	* doc/Tutorial_eng.lhs: Corrected documentation on units of
+	measure (reported by Dylan Thurston <dpt@lotus.bostoncoop.net>).
+
 2002-09-06  Marco Kuhlmann <mk@mcqm.net>
 
 	Imported sources into Savannah CVS.
