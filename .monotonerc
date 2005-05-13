@@ -26,6 +26,7 @@ function ignore_file(name)
   if (string.find(name, "^docs/")) then return true end
   if (string.find(name, "^funcmp-.*%.tar%.gz")) then return true end
   if (string.find(name, "^legacy%-doc/")) then return true end
+  if (string.find(name, "^html/")) then return true end
 
   return false
 end
