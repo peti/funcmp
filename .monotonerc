@@ -1,32 +1,24 @@
 -- .monotonerc for FuncMP
 
 function ignore_file(name)
-
-  -- ignore CVS
-  if (name == ".cvsignore") then return true end
-  if (string.find(name, "CVS/Entries$")) then return true end
-  if (string.find(name, "CVS/Entries.Log$")) then return true end
-  if (string.find(name, "CVS/Repository$")) then return true end
-  if (string.find(name, "CVS/Root$")) then return true end
-  if (string.find(name, "CVS/Tag")) then return true end
-
-  -- ignore generated files
   if (name == ".depend") then return true end
   if (name == ".depend.bak") then return true end
   if (name == ".installed-pkg-config") then return true end
   if (name == ".setup-config") then return true end
   if (name == "index.html") then return true end
+  if (string.find(name, "%.haddock$")) then return true end
   if (string.find(name, "%.hi$")) then return true end
-  if (string.find(name, "%_hi$")) then return true end
   if (string.find(name, "%.o$")) then return true end
-  if (string.find(name, "lib.*%.a$")) then return true end
+  if (string.find(name, "%.raw%-hs$")) then return true end
+  if (string.find(name, "%_hi$")) then return true end
   if (string.find(name, "%_o$")) then return true end
   if (string.find(name, "^_darcs/")) then return true end
   if (string.find(name, "^dist/")) then return true end
   if (string.find(name, "^docs/")) then return true end
   if (string.find(name, "^funcmp-.*%.tar%.gz")) then return true end
-  if (string.find(name, "^legacy%-doc/")) then return true end
   if (string.find(name, "^html/")) then return true end
+  if (string.find(name, "^legacy%-doc/")) then return true end
+  if (string.find(name, "lib.*%.a$")) then return true end
 
   return false
 end
