@@ -16,3 +16,4 @@
 ^lib.*\.a$
 _hi$
 _o$
+^Setup.lhs$
