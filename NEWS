@@ -1,6 +1,0 @@
-* Addad "funcmp.cabal" file so that the package can be built
-  and installed with Cabal <http://haskell.org/cabal/>.
-
-* Moved modules into hierarchical namespace.
-
-* Major code clean-up to make it work with GHC 6.x and Hugs.
