@@ -3,7 +3,7 @@ module FMP.File (
       fileExists, clearFile, getParameters
       ) where
 
-import IO
+import System.IO
 
 data Parameters               =  Parameters{  mpBin           :: String,
                                               funcmpBin,

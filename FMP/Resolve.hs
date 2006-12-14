@@ -9,7 +9,7 @@ import FMP.Types
 import FMP.Picture
 import FMP.Syntax
 import FMP.Symbols
-import Monad(mplus)
+import Control.Monad ( mplus )
 
 maybes2List                   :: [Maybe a] -> [a]
 maybes2List []                =  []

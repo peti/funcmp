@@ -35,7 +35,8 @@ import FMP.Term
 import FMP.Tree
 import FMP.Turtle
 import FMP.Types
-import System         (system, ExitCode(..))
+import System.Exit    ( ExitCode(..) )
+import System.Cmd     ( system )
 
 --     Hauptkonvertierungsfunktion
 --
