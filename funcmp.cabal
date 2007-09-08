@@ -1,7 +1,8 @@
 Name:           funcmp
-Version:        0.0-2006-12-14
+Version:        1.0
 Author:         Meik Hellmund, Ralf Hinze, Joachim Korittky,
                 Marco Kuhlmann, Ferenc Wágner, Peter Simons
+Category:       Graphics
 License:        GPL
 License-file:   COPYING
 Maintainer:     simons@cryp.to
@@ -15,6 +16,7 @@ Description:    Functional MetaPost is a Haskell frontend
                 e.g. LaTeX.
 Synopsis:       Functional MetaPost
 Build-Depends:  base, haskell98
+
 Exposed-Modules:
     FMP,
     FMP.Canvas,
@@ -33,3 +35,21 @@ Exposed-Modules:
     FMP.Tree,
     FMP.Turtle,
     FMP.Types
+
+Data-files:
+    AUTHORS,
+    ChangeLog,
+    README,
+    prologue.txt,
+    texmf/FuncMP.mp,
+    texmf/fmp1.mf,
+    texmf/fmp24.mf,
+    texmf/fmp8.mf,
+    doc/FMPMain.lhs
+    doc/Manual.lhs
+    doc/Manual_eng.lhs
+    doc/README.doc
+    doc/Tutorial.lhs
+    doc/Tutorial_eng.lhs
+    doc/fmp.ini
+    doc/lhs2TeX.fmt
