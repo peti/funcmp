@@ -16,7 +16,6 @@ Description:    Functional MetaPost is a Haskell frontend
                 e.g. LaTeX.
 Synopsis:       Functional MetaPost
 Build-Depends:  base, haskell98
-
 Exposed-Modules:
     FMP,
     FMP.Canvas,
@@ -35,7 +34,6 @@ Exposed-Modules:
     FMP.Tree,
     FMP.Turtle,
     FMP.Types
-
 Data-files:
     AUTHORS,
     ChangeLog,
