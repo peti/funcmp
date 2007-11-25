@@ -1,6 +1,9 @@
+/.installed-pkg-config
+/.setup-config
 /GNUmakefile
 /Setup.lhs
 /_darcs
+/dist
 /docs
 /funcmp-*tar.gz
 /index.html
