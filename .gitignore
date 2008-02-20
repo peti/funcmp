@@ -1,6 +1,9 @@
+*.hi
+*.o
 /.installed-pkg-config
 /.setup-config
 /GNUmakefile
+/Setup
 /Setup.lhs
 /_darcs
 /dist
