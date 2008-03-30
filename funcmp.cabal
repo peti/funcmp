@@ -1,7 +1,9 @@
+-- -*- coding: utf-8; -*-
+
 Name:           funcmp
 Version:        1.1
 Author:         Meik Hellmund, Ralf Hinze, Joachim Korittky,
-                Marco Kuhlmann, Ferenc Wágner, Peter Simons
+                Marco Kuhlmann, Ferenc WÃ¡gner, Peter Simons
 Category:       Graphics
 License:        GPL
 License-file:   COPYING
