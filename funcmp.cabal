@@ -17,7 +17,7 @@ Description:    Functional MetaPost is a Haskell frontend
                 PostScript files and smoothly included into
                 e.g. LaTeX.
 Synopsis:       Functional MetaPost
-Build-Depends:  base, haskell98
+Build-Depends:  base, haskell98, process
 Build-Type:     Simple
 Exposed-Modules:
     FMP,
