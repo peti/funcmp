@@ -19,6 +19,7 @@ module FMP
       )
   where
 
+import Paths_funcmp (getDataDir)
 import FMP.Canvas
 import FMP.Color
 import FMP.Core
@@ -35,8 +36,9 @@ import FMP.Term
 import FMP.Tree
 import FMP.Turtle
 import FMP.Types
-import System.Exit    ( ExitCode(..) )
-import System.Cmd     ( system )
+import System.Exit     ( ExitCode(..) )
+import System.FilePath ( combine )
+import System.Cmd      ( system )
 
 --     Hauptkonvertierungsfunktion
 --
@@ -90,7 +92,10 @@ generate prefix n pic         =  getParameters >>= doOutput
       mpDoc param             =  emit (metaPost n (toPicture pic) param)
       doOutput param          =  do writeFile (fileName param)
                                       (show (mpDoc param))
-                                    err <- system (mpBin param ++ " "
+                                    dataDir <- getDataDir
+                                    err <- system ("MPINPUTS=${MPINPUTS}:"
+                                    	           ++ combine dataDir "texmf"
+                                                   ++ " " ++ mpBin param ++ " "
                                                    ++ fileName param
                                                    ++ " >> /dev/null")
                                     if err==ExitSuccess
