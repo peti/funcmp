@@ -1,57 +1,76 @@
--- -*- coding: utf-8; -*-
+Name:                   funcmp
+Version:                1.3
+License:                GPL
+License-File:           COPYING
+Author:                 Meik Hellmund, Ralf Hinze, Joachim Korittky,
+                        Marco Kuhlmann, Ferenc Wágner, Peter Simons
+Maintainer:             Peter Simons <simons@cryp.to>
+Homepage:               http://cryp.to/funcmp/
+Category:               Graphics
+Synopsis:               Functional MetaPost
+Description:            Functional MetaPost is a Haskell frontend to the
+                        MetaPost language by John Hobby. Users write their
+                        graphics as Haskell programs, which then emit MetaPost
+                        code that can be compiled into encapsulated PostScript
+                        files and smoothly included into e.g. LaTeX.
+                        .
+                        A collection of useful examples how to use Functional
+                        MetaPost can be found in the user's manual at
+                        <http://cryp.to/funcmp/legacy-doc/Manual_eng.ps>. The
+                        document doesn't offer very much detail in terms of
+                        explanations, but the code samples are quite helpful.
+                        .
+                        Further documentation can be found in the original
+                        thesis that describes the implementation. The text is
+                        available in German at
+                        <http://cryp.to/funcmp/legacy-doc/Thesis.ps> and in
+                        English at
+                        <http://cryp.to/funcmp/legacy-doc/Thesis_eng.ps>.
+                        .
+                        Last but not least, there is a tutorial that offers many
+                        helpful examples available in German at
+                        <http://cryp.to/funcmp/legacy-doc/Tutorial.ps> and in
+                        English at
+                        <http://cryp.to/funcmp/legacy-doc/Tutorial_eng.ps>.
+Cabal-Version:          >= 1.6
+Build-Type:             Simple
+Tested-With:            GHC == 6.12.1
 
-Name:           funcmp
-Version:        1.2
-Author:         Meik Hellmund, Ralf Hinze, Joachim Korittky,
-                Marco Kuhlmann, Ferenc Wágner, Peter Simons
-Category:       Graphics
-License:        GPL
-License-file:   COPYING
-Maintainer:     simons@cryp.to
-Homepage:       http://cryp.to/funcmp/
-Description:    Functional MetaPost is a Haskell frontend
-                to the MetaPost language by John Hobby.
-                Users write their graphics as Haskell
-                programs, which then emit MetaPost code
-                that can be compiled into encapsulated
-                PostScript files and smoothly included into
-                e.g. LaTeX.
-Synopsis:       Functional MetaPost
-Build-Depends:  base, haskell98, process, filepath
-Build-Type:     Simple
-Exposed-Modules:
-    Paths_funcmp,
-    FMP,
-    FMP.Canvas,
-    FMP.Color,
-    FMP.Core,
-    FMP.File,
-    FMP.Frames,
-    FMP.Matrix,
-    FMP.PP,
-    FMP.Picture,
-    FMP.RedBlack,
-    FMP.Resolve,
-    FMP.Symbols,
-    FMP.Syntax,
-    FMP.Term,
-    FMP.Tree,
-    FMP.Turtle,
-    FMP.Types
-Data-files:
-    AUTHORS,
-    ChangeLog,
-    README,
-    prologue.txt,
-    texmf/FuncMP.mp,
-    texmf/fmp1.mf,
-    texmf/fmp24.mf,
-    texmf/fmp8.mf,
-    doc/FMPMain.lhs
-    doc/Manual.lhs
-    doc/Manual_eng.lhs
-    doc/README.doc
-    doc/Tutorial.lhs
-    doc/Tutorial_eng.lhs
-    doc/fmp.ini
-    doc/lhs2TeX.fmt
+Data-files:             texmf/FuncMP.mp
+                        texmf/fmp1.mf
+                        texmf/fmp24.mf
+                        texmf/fmp8.mf
+                        doc/FMPMain.lhs
+                        doc/Manual.lhs
+                        doc/Manual_eng.lhs
+                        doc/README.doc
+                        doc/Tutorial.lhs
+                        doc/Tutorial_eng.lhs
+                        doc/fmp.ini
+                        doc/lhs2TeX.fmt
+
+Source-Repository head
+  Type:                 git
+  Location:             http://git.cryp.to/funcmp
+
+Library
+  Build-Depends:        base >= 3 && <= 5, process, filepath
+  Exposed-Modules:      Paths_funcmp
+                        FMP
+                        FMP.Canvas
+                        FMP.Color
+                        FMP.Core
+                        FMP.File
+                        FMP.Frames
+                        FMP.Matrix
+                        FMP.PP
+                        FMP.Picture
+                        FMP.RedBlack
+                        FMP.Resolve
+                        FMP.Symbols
+                        FMP.Syntax
+                        FMP.Term
+                        FMP.Tree
+                        FMP.Turtle
+                        FMP.Types
+  Ghc-Options:        	-Wall

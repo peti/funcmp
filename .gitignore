@@ -1,13 +1,3 @@
-*.hi
-*.o
-/.installed-pkg-config
-/.setup-config
-/GNUmakefile
-/Setup
-/Setup.lhs
-/_darcs
+# ignore cabal build files
+
 /dist
-/docs
-/funcmp-*tar.gz
-/index.html
-/legacy-doc
