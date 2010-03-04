@@ -36,7 +36,7 @@ Cabal-Version:          >= 1.6
 Build-Type:             Simple
 Tested-With:            GHC == 6.12.1
 
-Data-files:		doc/FMPMain.hs
+Data-files:             doc/FMPMain.hs
                         doc/Manual.lhs
                         doc/Manual_eng.lhs
                         doc/README.doc
