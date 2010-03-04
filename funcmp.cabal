@@ -55,8 +55,7 @@ Source-Repository head
 
 Library
   Build-Depends:        base >= 3 && <= 5, process, filepath
-  Exposed-Modules:      Paths_funcmp
-                        FMP
+  Exposed-Modules:      FMP
                         FMP.Canvas
                         FMP.Color
                         FMP.Core
@@ -73,4 +72,5 @@ Library
                         FMP.Tree
                         FMP.Turtle
                         FMP.Types
+  Other-Modules:        Paths_funcmp
   Ghc-Options:        	-Wall
