@@ -1,3 +1,6 @@
+Functional MetaPost Documentation
+=================================
+
 If you feel like regenerating the English documentation
 (Tutorial_eng.lhs and Manual_eng.lhs; the Thesis is still
 an ongoing work):
@@ -33,3 +36,32 @@ an ongoing work):
 
 - latex, latex, dvips
   (xdvi previewing needs "prologues:=2" in the first line of .FuncMP)
+
+
+COPYING
+-------
+This licensing information is valid for the following list of files:
+
+  README.doc
+  fmp.ini
+  lhs2TeX.fmt
+
+Copyright (c) 2003-2010 Peter Simons
+Copyright (c) 2002-2003 Ferenc Wágner
+Copyright (c) 2002-2003 Meik Hellmund
+Copyright (c) 1998-2002 Ralf Hinze
+Copyright (c) 1998-2002 Joachim Korittky
+Copyright (c) 1998-2002 Marco Kuhlmann
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
