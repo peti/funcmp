@@ -20,7 +20,8 @@ License-File:           COPYING
 Author:                 Meik Hellmund, Ralf Hinze, Joachim Korittky,
                         Marco Kuhlmann, Ferenc Wágner, Peter Simons
 Maintainer:             Peter Simons <simons@cryp.to>
-Homepage:               http://cryp.to/funcmp/
+Homepage:               http://savannah.nongnu.org/projects/funcmp/
+Bug-Reports:            http://savannah.nongnu.org/bugs/?func=additem&group=funcmp
 Category:               Graphics
 Synopsis:               Functional MetaPost
 Description:            Functional MetaPost is a Haskell frontend to the
@@ -31,22 +32,22 @@ Description:            Functional MetaPost is a Haskell frontend to the
                         .
                         A collection of useful examples how to use Functional
                         MetaPost can be found in the user's manual at
-                        <http://cryp.to/funcmp/legacy-doc/Manual_eng.ps>. The
+                        <http://download.savannah.nongnu.org/releases/funcmp/Manual_eng.ps>. The
                         document doesn't offer very much detail in terms of
                         explanations, but the code samples are quite helpful.
                         .
                         Further documentation can be found in the original
                         thesis that describes the implementation. The text is
                         available in German at
-                        <http://cryp.to/funcmp/legacy-doc/Thesis.ps> and in
+                        <http://download.savannah.nongnu.org/releases/funcmp/Thesis.ps> and in
                         English at
-                        <http://cryp.to/funcmp/legacy-doc/Thesis_eng.ps>.
+                        <http://download.savannah.nongnu.org/releases/funcmp/Thesis_eng.ps>.
                         .
                         Last but not least, there is a tutorial that offers many
                         helpful examples available in German at
-                        <http://cryp.to/funcmp/legacy-doc/Tutorial.ps> and in
+                        <http://download.savannah.nongnu.org/releases/funcmp/Tutorial.ps> and in
                         English at
-                        <http://cryp.to/funcmp/legacy-doc/Tutorial_eng.ps>.
+                        <http://download.savannah.nongnu.org/releases/funcmp/Tutorial_eng.ps>.
 Cabal-Version:          >= 1.6
 Build-Type:             Simple
 Tested-With:            GHC == 6.12.1
@@ -66,7 +67,7 @@ Data-files:             doc/FMPMain.hs
 
 Source-Repository head
   Type:                 git
-  Location:             http://git.cryp.to/funcmp
+  Location:             git://git.savannah.nongnu.org/funcmp.git
 
 Library
   Build-Depends:        base >= 3 && <= 5, process, filepath
