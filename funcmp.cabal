@@ -14,11 +14,12 @@
 -- along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 Name:                   funcmp
-Version:                1.4
+Version:                1.5
 License:                GPL
 License-File:           COPYING
 Author:                 Meik Hellmund, Ralf Hinze, Joachim Korittky,
-                        Marco Kuhlmann, Ferenc Wágner, Peter Simons
+                        Marco Kuhlmann, Ferenc Wágner, Peter Simons,
+                        Robin Green
 Maintainer:             Peter Simons <simons@cryp.to>
 Homepage:               http://savannah.nongnu.org/projects/funcmp/
 Bug-Reports:            http://savannah.nongnu.org/bugs/?func=additem&group=funcmp
