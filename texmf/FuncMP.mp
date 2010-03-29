@@ -199,24 +199,3 @@ vardef varrowhead (expr p,l,a) =
     cuttings;
   (q rotated .5a & reverse q rotated -.5a) shifted e
 enddef;
-
-special "/xdvi$run where {pop errordict begin /undefined {} bind def end} if";
-special "/fmp1 /fmp1 def /fmp8 /fmp8 def /fmp24 /fmp24 def";
-special "/bitline1 {gsave pop dup scale dup length 8 mul 1 true currentpoint translate";
-special "   [66.66666 0 0 66.66666 0 0] 4 index imagemask pop grestore} bind def";
-special "/bitline8 {gsave pop dup scale dup length 1 8 currentpoint translate";
-special "    [2.8 0 0 2.8 0 0] 4 index image pop grestore} bind def";
-special "/bitline24 {gsave pop dup scale dup length 3 idiv 1 8 currentpoint translate";
-special "    [2.777777 0 0 2.777777 0 0] 4 index false 3 colorimage pop grestore} bind def";
-special "/XDVIfshow  {findfont exch scalefont setfont show} bind def";
-special "/DVIPSfshow {exch gsave 72 TeXDict /Resolution get div -72 TeXDict";
-special "     /VResolution get div scale 1 DVImag div dup scale get cvx exec";
-special "     show grestore} bind def";
-special "/fshowText";
-special "   {/xdvi$run where {pop XDVIfshow} {DVIPSfshow} ifelse} def";
-special "/fshow { exch dup ";
-special "	  /fmp1 eq {bitline1}";
-special "		   {dup /fmp8 eq {bitline8}";
-special "				 {dup /fmp24 eq {bitline24}";
-special "						{fshowText}";
-special "	  ifelse}       ifelse}       ifelse} def";
