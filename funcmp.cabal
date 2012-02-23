@@ -14,7 +14,7 @@
 -- along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 Name:                   funcmp
-Version:                1.5
+Version:                1.6
 License:                GPL
 License-File:           COPYING
 Author:                 Meik Hellmund, Ralf Hinze, Joachim Korittky,
@@ -51,7 +51,7 @@ Description:            Functional MetaPost is a Haskell frontend to the
                         <http://download.savannah.nongnu.org/releases/funcmp/Tutorial_eng.ps>.
 Cabal-Version:          >= 1.6
 Build-Type:             Simple
-Tested-With:            GHC == 6.12.1
+Tested-With:            GHC == 6.10.4, GHC == 6.12.1, GHC == 7.0.4, GHC == 7.4.1
 
 Data-files:             doc/FMPMain.hs
                         doc/Manual.lhs

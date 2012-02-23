@@ -636,7 +636,7 @@ instance HasEmit MPPen where
       emit (MPPenSquare (x,y) a)
                               =  text " withpen pensquare" <+> emitPen2 (x,y) a
 
-emitPen2                      :: (Num b, HasEmit b, Eq a, HasEmit a) => (a,a)
+emitPen2                      :: (Eq b, Num b, HasEmit b, Eq a, HasEmit a) => (a,a)
                               -> b -> Doc
 emitPen2 (x,y) a              =  (if x == y
                                       then text "scaled" <+> parens (emit x)
