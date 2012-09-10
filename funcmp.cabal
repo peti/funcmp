@@ -90,4 +90,3 @@ Library
                         FMP.Turtle
                         FMP.Types
   Other-Modules:        Paths_funcmp
-  Ghc-Options:          -Wall
