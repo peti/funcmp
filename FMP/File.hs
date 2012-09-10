@@ -31,6 +31,7 @@ module FMP.File (
       ) where
 
 import System.IO
+import Control.Exception
 
 data Parameters               =  Parameters{  mpBin           :: String,
                                               funcmpBin,
@@ -60,18 +61,16 @@ stdParameters                 =  Parameters{  mpBin           = "virmp",
 -- Existiert die Datei |file|, f"uhre |t| aus, sonst |f|.
 
 fileExists                    :: String -> IO a -> (IOError -> IO a) -> IO a
-fileExists file t f           =  catch (openFile file ReadMode
+fileExists file t             =  Control.Exception.catch (openFile file ReadMode
                                         >>= \h1 -> hClose h1
                                         >> t)
-                                       f
 
 -- L"osche eine Datei
 
 clearFile                     :: String -> IO a -> (IOError -> IO a) -> IO a
-clearFile file t f            =  catch (openFile file WriteMode
+clearFile file t              =  Control.Exception.catch (openFile file WriteMode
                                         >>= \h1 -> hClose h1
                                         >> t)
-                                       f
 
 getParameters                 :: IO Parameters
 getParameters                 =  fileExists "fmp.ini"
@@ -117,4 +116,3 @@ prolog'                       =  "verbatimtex\n\
                                  \etex\n\n\
                                  \input boxes\n\
                                  \input FuncMP"
-
