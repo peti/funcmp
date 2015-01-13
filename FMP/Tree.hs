@@ -38,7 +38,11 @@ module FMP.Tree (
       NodeName(..)
       ) where
 
-import Prelude hiding ( (<*) )
+import Prelude ( Read(..), Show(..), Eq(..), Num(..), Fractional(..), Int, Maybe(..)
+               , otherwise, map, length, zip, unzip, init, take, (++), showString, tail
+               , foldl, foldr, fst, snd, Bool(..), drop, fromIntegral, (.), concat, reverse
+               , Ord(..)
+               )
 import FMP.Types
 import FMP.Color
 import FMP.Picture
