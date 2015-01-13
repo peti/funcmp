@@ -47,7 +47,11 @@ module FMP.Types (
       IsName(..)
       ) where
 
-import Prelude hiding ( (<*) )
+import Prelude ( Real(..), Enum(..), Floating(..), Fractional(..), Num(..), Ord(..)
+               , takeWhile, map, iterate, fromIntegral, (.), Read(..), Show(..)
+               , Eq(..), Double, Int, id, Char, error, otherwise, Bool(..), (||)
+               , String, Integral(..)
+               )
 
 infixr 0 <+, <*
 infixr 5 .=
