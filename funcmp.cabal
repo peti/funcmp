@@ -51,7 +51,7 @@ Description:            Functional MetaPost is a Haskell frontend to the
                         <http://download.savannah.nongnu.org/releases/funcmp/Tutorial_eng.ps>.
 Cabal-Version:          >= 1.6
 Build-Type:             Simple
-Tested-With:            GHC >= 6.10.4 && <= 7.8.3
+Tested-With:            GHC >= 6.10.4 && <= 7.10.1
 
 Data-files:             doc/FMPMain.hs
                         doc/Manual.lhs
@@ -71,7 +71,7 @@ Source-Repository head
   Location:             git://git.savannah.nongnu.org/funcmp.git
 
 Library
-  Build-Depends:        base >= 3 && <= 5, process, filepath
+  Build-Depends:        base >= 3 && <= 5, process >= 1.0.1.1, filepath
   Exposed-Modules:      FMP
                         FMP.Canvas
                         FMP.Color

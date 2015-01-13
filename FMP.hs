@@ -65,7 +65,7 @@ import FMP.Turtle
 import FMP.Types
 import System.Exit     ( ExitCode(..) )
 import System.FilePath ( combine )
-import System.Cmd      ( system )
+import System.Process  ( system )
 
 --     Hauptkonvertierungsfunktion
 --
@@ -121,7 +121,7 @@ generate prefix n pic         =  getParameters >>= doOutput
                                       (show (mpDoc param))
                                     dataDir <- getDataDir
                                     err <- system ("MPINPUTS=${MPINPUTS}:"
-                                    	           ++ combine dataDir "texmf"
+                                                   ++ combine dataDir "texmf"
                                                    ++ " " ++ mpBin param ++ " "
                                                    ++ fileName param
                                                    ++ " >> /dev/null")

@@ -38,6 +38,7 @@ module FMP.Tree (
       NodeName(..)
       ) where
 
+import Prelude hiding ( (<*) )
 import FMP.Types
 import FMP.Color
 import FMP.Picture

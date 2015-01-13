@@ -30,6 +30,7 @@ module FMP.Canvas (
       cdrop, cdraw, cdraws , cfill, cfills, cclip
       ) where
 
+import Prelude hiding ( (<*) )
 import FMP.Types
 import FMP.Picture
 
@@ -78,4 +79,3 @@ cdraw a                       =  cdraws [a]
 
 cfill                         :: IsArea a => a -> Canvas
 cfill a                       =  cfills [a]
-

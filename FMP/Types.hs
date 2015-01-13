@@ -47,7 +47,7 @@ module FMP.Types (
       IsName(..)
       ) where
 
-import Data.List
+import Prelude hiding ( (<*) )
 
 infixr 0 <+, <*
 infixr 5 .=
@@ -534,4 +534,3 @@ instance HasMed Numeric where
 
 instance HasWhatever Numeric where
       whatever                =  NumericWhatever
-
