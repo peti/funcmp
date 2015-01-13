@@ -30,7 +30,7 @@ module FMP.Canvas (
       cdrop, cdraw, cdraws , cfill, cfills, cclip
       ) where
 
-import Prelude hiding ( (<*) )
+import Prelude ( (.), map, Maybe(..), Show(..) )
 import FMP.Types
 import FMP.Picture
 
