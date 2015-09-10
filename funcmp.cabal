@@ -24,34 +24,35 @@ Maintainer:             Peter Simons <simons@cryp.to>
 Homepage:               http://savannah.nongnu.org/projects/funcmp/
 Bug-Reports:            http://savannah.nongnu.org/bugs/?func=additem&group=funcmp
 Category:               Graphics
-Synopsis:               Functional MetaPost
-Description:            Functional MetaPost is a Haskell frontend to the
-                        MetaPost language by John Hobby. Users write their
-                        graphics as Haskell programs, which then emit MetaPost
-                        code that can be compiled into encapsulated PostScript
-                        files and smoothly included into e.g. LaTeX.
-                        .
-                        A collection of useful examples how to use Functional
-                        MetaPost can be found in the user's manual at
-                        <http://download.savannah.nongnu.org/releases/funcmp/Manual_eng.ps>. The
-                        document doesn't offer very much detail in terms of
-                        explanations, but the code samples are quite helpful.
-                        .
-                        Further documentation can be found in the original
-                        thesis that describes the implementation. The text is
-                        available in German at
-                        <http://download.savannah.nongnu.org/releases/funcmp/Thesis.ps> and in
-                        English at
-                        <http://download.savannah.nongnu.org/releases/funcmp/Thesis_eng.ps>.
-                        .
-                        Last but not least, there is a tutorial that offers many
-                        helpful examples available in German at
-                        <http://download.savannah.nongnu.org/releases/funcmp/Tutorial.ps> and in
-                        English at
-                        <http://download.savannah.nongnu.org/releases/funcmp/Tutorial_eng.ps>.
+Synopsis:               Functional MetaPost is a Haskell frontend to the MetaPost language
 Cabal-Version:          >= 1.6
 Build-Type:             Simple
-Tested-With:            GHC >= 6.10.4 && <= 7.10.1
+tested-with:            GHC == 7.0.4, GHC == 7.4.2, GHC == 7.6.3, GHC == 7.8.4, GHC == 7.10.3
+                      , GHC == 8.0.2, GHC == 8.2.2, GHC == 8.4.1
+
+Description:
+  Functional MetaPost is a Haskell frontend to the MetaPost language by John
+  Hobby. Users write their graphics as Haskell programs, which then emit
+  MetaPost code that can be compiled into encapsulated PostScript files and
+  smoothly included into e.g. LaTeX.
+  .
+  A collection of useful examples how to use Functional MetaPost can be found
+  in the user's manual at
+  <http://download.savannah.nongnu.org/releases/funcmp/Manual_eng.ps>. The
+  document doesn't offer very much detail in terms of explanations, but the
+  code samples are quite helpful.
+  .
+  Further documentation can be found in the original thesis that describes the
+  implementation. The text is available in German at
+  <http://download.savannah.nongnu.org/releases/funcmp/Thesis.ps> and in
+  English at
+  <http://download.savannah.nongnu.org/releases/funcmp/Thesis_eng.ps>.
+  .
+  Last but not least, there is a tutorial that offers many helpful examples
+  available in German at
+  <http://download.savannah.nongnu.org/releases/funcmp/Tutorial.ps> and in
+  English at
+  <http://download.savannah.nongnu.org/releases/funcmp/Tutorial_eng.ps>.
 
 Data-files:             doc/FMPMain.hs
                         doc/Manual.lhs
