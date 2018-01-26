@@ -46,7 +46,6 @@ module FMP
       )
   where
 
-import Paths_funcmp (getDataDir)
 import FMP.Canvas
 import FMP.Color
 import FMP.Core
@@ -54,7 +53,6 @@ import FMP.File
 import FMP.Frames
 import FMP.Matrix
 import FMP.Picture
-import FMP.PP
 import FMP.RedBlack
 import FMP.Resolve
 import FMP.Symbols
@@ -63,9 +61,12 @@ import FMP.Term
 import FMP.Tree
 import FMP.Turtle
 import FMP.Types
+import Paths_funcmp (getDataDir)
+
 import System.Exit     ( ExitCode(..) )
 import System.FilePath ( combine )
 import System.Process  ( system )
+import Text.PrettyPrint
 
 --     Hauptkonvertierungsfunktion
 --
@@ -79,9 +80,8 @@ import System.Process  ( system )
 
 metaPost                      :: Int -> Picture -> Parameters -> MetaPost
 metaPost n t param            =  MPVerbatim "batchmode;"
-                                &  MPVerbatim (prolog param)
-                                &  MPFigure n
-                                      (MPAssign (Id "warningcheck") 0
+                                & MPVerbatim (prolog param)
+                                & MPFigure n (MPAssign (Id "warningcheck") 0
                                 & MPVerbatim "picture p[], q[], r[];"
                                 & MPVerbatim "transform t[],tr[];"
                                 & MPVerbatim "pair s[];"

@@ -14,7 +14,7 @@
 -- along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 Name:                   funcmp
-Version:                1.8
+Version:                1.9
 License:                GPL-3
 License-File:           COPYING
 Author:                 Meik Hellmund, Ralf Hinze, Joachim Korittky,
@@ -27,7 +27,7 @@ Category:               Graphics
 Synopsis:               Functional MetaPost is a Haskell frontend to the MetaPost language
 Cabal-Version:          >= 1.6
 Build-Type:             Simple
-tested-with:            GHC == 7.0.4, GHC == 7.4.2, GHC == 7.6.3, GHC == 7.8.4, GHC == 7.10.3
+tested-with:            GHC == 7.4.2, GHC == 7.6.3, GHC == 7.8.4, GHC == 7.10.3
                       , GHC == 8.0.2, GHC == 8.2.2, GHC == 8.4.1
 
 Description:
@@ -72,7 +72,7 @@ Source-Repository head
   Location:             git://git.savannah.nongnu.org/funcmp.git
 
 Library
-  Build-Depends:        base >= 3 && <= 5, process >= 1.0.1.1, filepath
+  Build-Depends:        base >= 4.5 && < 5, process >= 1.0.1.1, filepath, pretty
   Exposed-Modules:      FMP
                         FMP.Canvas
                         FMP.Color
@@ -80,7 +80,6 @@ Library
                         FMP.File
                         FMP.Frames
                         FMP.Matrix
-                        FMP.PP
                         FMP.Picture
                         FMP.RedBlack
                         FMP.Resolve
@@ -91,3 +90,4 @@ Library
                         FMP.Turtle
                         FMP.Types
   Other-Modules:        Paths_funcmp
+  other-extensions:     CPP

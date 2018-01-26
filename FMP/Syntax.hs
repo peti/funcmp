@@ -1,3 +1,5 @@
+{-# LANGUAGE CPP #-}
+
 {- |
    Module      :  FMP.Syntax
    Copyright   :  (c) 2003-2010 Peter Simons
@@ -25,15 +27,19 @@
   this program. If not, see <http://www.gnu.org/licenses/>.
  -}
 
-module FMP.Syntax
-  where
+module FMP.Syntax where
 
-import Numeric
-import FMP.PP
-import FMP.Term
-import FMP.Types
 import FMP.Color
 import FMP.Picture hiding ( empty, text )
+import FMP.Term
+import FMP.Types
+
+-- Avoid name clash with Prelude.<> exported by post-SMP versions of base.
+#if MIN_VERSION_base(4,11,0)
+import Prelude hiding ( (<>) )
+#endif
+import Numeric
+import Text.PrettyPrint
 
 class HasEmit a where
       emit                    :: a -> Doc
