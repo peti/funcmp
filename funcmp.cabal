@@ -21,8 +21,8 @@ Author:                 Meik Hellmund, Ralf Hinze, Joachim Korittky,
                         Marco Kuhlmann, Ferenc Wágner, Peter Simons,
                         Robin Green
 Maintainer:             Peter Simons <simons@cryp.to>
-Homepage:               http://savannah.nongnu.org/projects/funcmp/
-Bug-Reports:            http://savannah.nongnu.org/bugs/?func=additem&group=funcmp
+Homepage:               https://github.com/peti/funcmp
+Bug-Reports:            https://github.com/peti/funcmp/issues
 Category:               Graphics
 Synopsis:               Functional MetaPost is a Haskell frontend to the MetaPost language
 Cabal-Version:          >= 1.6
@@ -37,22 +37,17 @@ Description:
   smoothly included into e.g. LaTeX.
   .
   A collection of useful examples how to use Functional MetaPost can be found
-  in the user's manual at
-  <http://download.savannah.nongnu.org/releases/funcmp/Manual_eng.ps>. The
-  document doesn't offer very much detail in terms of explanations, but the
-  code samples are quite helpful.
+  in the <http://download.savannah.nongnu.org/releases/funcmp/Manual_eng.ps user's manual>.
+  The document doesn't offer very much detail in terms of explanations, but the
+  code samples are quite helpful. Further documentation can be found in the
+  <http://download.savannah.nongnu.org/releases/funcmp/Thesis_eng.ps original thesis>
+  that describes the implementation. The text is also available in
+  <http://download.savannah.nongnu.org/releases/funcmp/Thesis.ps German>.
   .
-  Further documentation can be found in the original thesis that describes the
-  implementation. The text is available in German at
-  <http://download.savannah.nongnu.org/releases/funcmp/Thesis.ps> and in
-  English at
-  <http://download.savannah.nongnu.org/releases/funcmp/Thesis_eng.ps>.
-  .
-  Last but not least, there is a tutorial that offers many helpful examples
-  available in German at
-  <http://download.savannah.nongnu.org/releases/funcmp/Tutorial.ps> and in
-  English at
-  <http://download.savannah.nongnu.org/releases/funcmp/Tutorial_eng.ps>.
+  Last but not least, there is a
+  <http://download.savannah.nongnu.org/releases/funcmp/Tutorial_eng.ps tutorial>
+  that offers many helpful examples (which is also available in
+  <http://download.savannah.nongnu.org/releases/funcmp/Tutorial.ps German>).
 
 Data-files:             doc/FMPMain.hs
                         doc/Manual.lhs
@@ -69,7 +64,7 @@ Data-files:             doc/FMPMain.hs
 
 Source-Repository head
   Type:                 git
-  Location:             git://git.savannah.nongnu.org/funcmp.git
+  Location:             git://github.com/peti/funcmp.git
 
 Library
   Build-Depends:        base >= 4.5 && < 5, process >= 1.0.1.1, filepath, pretty
