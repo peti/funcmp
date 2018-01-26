@@ -93,16 +93,16 @@ drawBorder fa n               =  if faVisible fa
                                               -> MPGraduatePath MPNormal
                                                       (mpColor c1) (mpColor c2)
                                                       (MPBPath (Id (suff n)))
-                                                      (mpPattern pattern) (mpPen pen)
+                                                      (mpPattern patt) (mpPen pen)
                                                       n' a
                                       _       -> MPDraw MPNormal (MPBPath (Id (suff n)))
-                                                      (mpPattern pattern) (mpColor fgColor)
+                                                      (mpPattern patt) (mpColor fgColor)
                                                       (mpPen pen)
                                       else relax
               where
               fgColor         =  faColor fa
               pen             =  faPen fa
-              pattern         =  faPattern fa
+              patt            =  faPattern fa
 
 -- Erzeugen von MetaPost
 --
