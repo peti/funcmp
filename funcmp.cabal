@@ -64,7 +64,7 @@ Data-files:             doc/FMPMain.hs
 
 Source-Repository head
   Type:                 git
-  Location:             git://github.com/peti/funcmp.git
+  Location:             https://github.com/peti/funcmp.git
 
 Library
   Build-Depends:        base >= 4.5 && < 5, process >= 1.0.1.1, filepath, pretty
